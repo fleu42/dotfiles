@@ -6,10 +6,10 @@ if has("syntax")
   syntax on
 endif
 
-" Only do this part when compiled with support for autocommands
 if has("autocmd")
   " In text files, always limit the width of text to 80 characters
   autocmd BufRead *.txt set textwidth=80
+  " Same goes for the Markdown files
   autocmd BufRead *.md set textwidth=80
   " When editing a file, always jump to the last cursor position
   autocmd BufReadPost *
@@ -17,7 +17,6 @@ if has("autocmd")
   \   exe "normal! g'\"" |
   \ endif
   filetype plugin indent on
-"  autocmd BufEnter *.txt let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 " Settings
@@ -29,20 +28,20 @@ endif
 
 "set backup		" keep a backup file
 set nocompatible	" Use Vim defaults (much better!)
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set viminfo='20,\"50	" viminfo file
-set history=30		" keep 30 lines of command line history
-set ruler		" show the cursor position all the time
+set backspace=indent,eol,start "backspacing over everything in insert mode
+set viminfo='20,\"50	
+set history=30		"lines of command line history kept
+set ruler		"show the cursor position all the time
 set laststatus=2    " StatusLine
 set showcmd         " Show (partial) command in status line.
 set showmatch       " Show matching brackets.
 set ignorecase      " Do case insensitive matching
 set smartcase       " Do smart case matching
 set incsearch       " Incremental search
-set hlsearch            " Hilight during search
+set hlsearch        " Hilight during search
 "set list
 "set lcs:tab:>-,trail:.
-set cindent
+set cindent         " Good stuff
 set smartindent
 set autoindent
 set softtabstop=4
@@ -50,8 +49,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 "set cinkeys=0{,0},:,0#,!,!^F
-set pastetoggle=<F11>
-set visualbell
+set pastetoggle=<F11>   " Save to type :set paste
+set visualbell          " Because I'm listening music
 set confirm             " Ask if unsaved changes while quit
 set hidden              " Hide buffers when they are abandoned
 set wildmenu            " Better command-line completion
