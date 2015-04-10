@@ -2,7 +2,7 @@
 
 My "not important" dotfiles.
 
-* .vimrc and .vim (make it so I can work)
+* .vimrc (make it so I can work)
 * .tmux.conf (same)
 * .login_conf (freebsd: utf-8 for my user)
 
